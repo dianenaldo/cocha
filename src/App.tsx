@@ -2,6 +2,7 @@ import Header from "./components/header";
 import Hero from "./components/hero";
 import Footer from "./components/footer";
 import User from "./pages/user";
+import Weather from "./pages/weather";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { withAuthenticationRequired } from '@auth0/auth0-react';
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/user",
     element: <ProtectedRoute component={User} />,
+  },
+  {
+    path: "/weather/:lat/:lon",
+    element: <ProtectedRoute component={Weather} />,
   },
 ]);
 

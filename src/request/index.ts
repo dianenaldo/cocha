@@ -4,7 +4,7 @@ export const getUserDetails = async(user : string) => {
     return data;
 }
 
-export const getGeoLocation = async(city : string) => {
+export const getCities = async(city : string) => {
     const cityUri = encodeURI(city);
     const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityUri}&appid=${import.meta.env.VITE_WEATHER_API_KEY}`);
     const data = await response.json();
