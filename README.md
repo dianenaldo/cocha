@@ -42,18 +42,23 @@
     <li>Weather API</li>
 </ul>
 
+[Auth0](https://auth0.com)
+<ul>
+    <li>Authentication</li>
+</ul>
+
 #
 ## Installation Guide
 
 Download the codes from this repository.
 
 Open `terminal` and `cd` into the project directory, run:
-### `npm install`
+##### `npm install`
 <br>
 
 To run localhost:
 
-### `npm start`
+##### `npm start`
 <br>
 
 Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
