@@ -32,11 +32,3 @@ export interface IUser {
     created_at: string
     updated_at: string
 }
-export interface ICity {
-    name: string
-    local_names: any
-    lat: string
-    lon: string
-    country: string
-    state: string
-}

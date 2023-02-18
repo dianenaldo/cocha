@@ -1,10 +1,16 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import Footer from "./components/footer";
 import Header from "./components/header";
 import Hero from "./components/hero";
-import Footer from "./components/footer";
+import { IUser } from "./types";
 import User from "./pages/user";
 import Weather from "./pages/weather";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { atom } from "jotai";
 import { withAuthenticationRequired } from '@auth0/auth0-react';
+
+export const userAtom = atom<IUser>({} as IUser);
+export const selectedCityAtom = atom<string>('');
 
 const ProtectedRoute = ({ component, ...args } : any) => {
   const Component = withAuthenticationRequired(component, args);
@@ -21,7 +27,7 @@ const router = createBrowserRouter([
     element: <ProtectedRoute component={User} />,
   },
   {
-    path: "/weather/:lat/:lon",
+    path: "/weather",
     element: <ProtectedRoute component={Weather} />,
   },
 ]);

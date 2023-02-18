@@ -4,7 +4,7 @@ const Hero = () => {
   const { loginWithRedirect } = useAuth0();
 
   return (
-    <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+    <div className="mx-auto max-w-2xl">
       <div className="">
         <p className="mt-6 text-lg leading-8 text-gray-600">
           Welcome to the weather forecast web application. Please login with

@@ -4,9 +4,8 @@ export const getUserDetails = async(user : string) => {
     return data;
 }
 
-export const getCities = async(city : string) => {
-    const cityUri = encodeURI(city);
-    const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityUri}&appid=${import.meta.env.VITE_WEATHER_API_KEY}`);
+export const getWeather = async(city : string) => {
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${city}&days=1&aqi=no&alerts=no`);
     const data = await response.json();
     return data;
 }
