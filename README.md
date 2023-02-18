@@ -56,9 +56,13 @@ Open `terminal` and `cd` into the project directory, run:
 ##### `npm install`
 <br>
 
-To run localhost:
+to build:
+##### `npm run build`
+<br>
 
-##### `npm start`
+To run locally:
+
+##### `npm start dev`
 <br>
 
 Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
